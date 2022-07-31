@@ -2,3 +2,5 @@ export const TEST_START_MESSAGE = `Hi! I'm the TestBot. If you're seeing this th
 
 For now, this bot does the exact same thing as the CalculateTipBot, it calculates a tip based on the given amount. Have fun building around that!
 `;
+
+export const WAKE_MESSAGE = "Testing Bot is awake";
