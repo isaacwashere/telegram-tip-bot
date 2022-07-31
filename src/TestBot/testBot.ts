@@ -34,6 +34,7 @@ export const addTestBotCommands = (bot: Bot) => {
 
       const tip = tipAmount.toFixed(FIXED_DECIMAL_AMOUNT);
       const total = totalAmount.toFixed(FIXED_DECIMAL_AMOUNT);
+
       const currentMessage = `${rate.readable} - ${tip} - ${total}`;
       ratesMessage = ratesMessage + `\n${currentMessage}`;
     });
