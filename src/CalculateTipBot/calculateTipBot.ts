@@ -5,21 +5,16 @@ import {
   RATES,
 } from "../shared/constants";
 import { calculateTipAmount } from "../shared/utils";
-import { TEST_START_MESSAGE } from "./constants";
+import { CALCULATE_TIP_START_MESSAGE } from "./constants";
 
-/**
- * @description This is simply to be used as a playground for testing locally
- * @param bot should be passed to this
- */
-export const addTestBotCommands = (bot: Bot) => {
-  bot.start((ctx) => ctx.reply(TEST_START_MESSAGE));
+export const addCalculateTipBotCommands = (bot: Bot) => {
+  bot.start((ctx) => ctx.reply(CALCULATE_TIP_START_MESSAGE));
 
   bot.on("text", (ctx) => {
-    console.log("Local testing...", ctx);
     const totalCost = Number(ctx.update.message.text);
 
     if (!totalCost) {
-      console.log("Invalid Input", totalCost);
+      console.log("Received-Invalid-Input", ctx, totalCost);
       return ctx.reply(ERROR_MESSAGE);
     }
 

@@ -15,6 +15,8 @@ export const calculateTipAmount = ({
 }: CalculateTipParams): number => {
   let total = totalCost * tipPercent;
   total = Math.round(total * 100) / 100;
+
   const finalAmount = total.toFixed(FIXED_DECIMAL_AMOUNT);
+
   return parseFloat(finalAmount);
 };
