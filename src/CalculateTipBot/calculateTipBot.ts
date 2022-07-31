@@ -14,7 +14,7 @@ export const addCalculateTipBotCommands = (bot: Bot) => {
     const totalCost = Number(ctx.update.message.text);
 
     if (!totalCost) {
-      return bot.telegram.sendMessage(ctx.chat.id, ERROR_MESSAGE, {});
+      return bot.telegram.sendMessage(ctx.chat.id, ERROR_MESSAGE);
     }
 
     let ratesMessage = "";
