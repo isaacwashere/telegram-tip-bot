@@ -1,6 +1,6 @@
 # Telegram Tip Bot
 
-This is just supposed to be a fun little open source Telegram Bot to help calculate the tip for a user
+This is just supposed to be a fun little open source Telegram Bot to help calculate the tip for a user, given a total cost in USD. To use the production bot, download Telegram and search for CalculateTipBot.
 
 ## Contents
 
