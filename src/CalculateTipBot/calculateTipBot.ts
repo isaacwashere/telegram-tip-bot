@@ -5,10 +5,12 @@ import {
   RATES,
 } from "../shared/constants";
 import { calculateTipAmount } from "../shared/utils";
-import { CALCULATE_TIP_START_MESSAGE } from "./constants";
+import { CALCULATE_TIP_START_MESSAGE, WAKE_MESSAGE } from "./constants";
 
 export const addCalculateTipBotCommands = (bot: Bot) => {
   bot.start((ctx) => ctx.reply(CALCULATE_TIP_START_MESSAGE));
+
+  bot.command("wake", (ctx) => ctx.reply(WAKE_MESSAGE));
 
   bot.on("text", (ctx) => {
     const totalCost = Number(ctx.update.message.text);

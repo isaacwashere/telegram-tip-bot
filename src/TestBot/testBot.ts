@@ -5,7 +5,7 @@ import {
   RATES,
 } from "../shared/constants";
 import { calculateTipAmount } from "../shared/utils";
-import { TEST_START_MESSAGE } from "./constants";
+import { TEST_START_MESSAGE, WAKE_MESSAGE } from "./constants";
 
 /**
  * @description This is simply to be used as a playground for testing locally
@@ -13,6 +13,8 @@ import { TEST_START_MESSAGE } from "./constants";
  */
 export const addTestBotCommands = (bot: Bot) => {
   bot.start((ctx) => ctx.reply(TEST_START_MESSAGE));
+
+  bot.command("wake", (ctx) => ctx.reply(WAKE_MESSAGE));
 
   bot.on("text", (ctx) => {
     console.log("Local testing...", ctx);
