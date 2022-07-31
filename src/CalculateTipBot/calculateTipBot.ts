@@ -14,8 +14,8 @@ export const addCalculateTipBotCommands = (bot: Bot) => {
     const totalCost = Number(ctx.update.message.text);
 
     if (!totalCost) {
-      console.log("Received-Invalid-Input", ctx);
-      return bot.telegram.sendMessage(ctx.chat.id, ERROR_MESSAGE);
+      console.log("Received-Invalid-Input", ctx, totalCost);
+      return ctx.reply(ERROR_MESSAGE);
     }
 
     let ratesMessage = "";
@@ -34,6 +34,6 @@ export const addCalculateTipBotCommands = (bot: Bot) => {
       ratesMessage = ratesMessage + `\n${currentMessage}`;
     });
 
-    bot.telegram.sendMessage(ctx.chat.id, ratesMessage);
+    ctx.reply(ratesMessage);
   });
 };

@@ -20,7 +20,7 @@ export const addTestBotCommands = (bot: Bot) => {
 
     if (!totalCost) {
       console.log("Invalid Input", totalCost);
-      return bot.telegram.sendMessage(ctx.chat.id, ERROR_MESSAGE);
+      return ctx.reply(ERROR_MESSAGE);
     }
 
     let ratesMessage = "";
@@ -39,6 +39,6 @@ export const addTestBotCommands = (bot: Bot) => {
       ratesMessage = ratesMessage + `\n${currentMessage}`;
     });
 
-    bot.telegram.sendMessage(ctx.chat.id, ratesMessage);
+    ctx.reply(ratesMessage);
   });
 };
