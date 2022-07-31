@@ -8,6 +8,7 @@ const prodBot = new Telegraf(PROD_BOT_TOKEN);
 
 const startBot = () => {
   if (ENVIRONMENT === "production") {
+    console.log("Starting Production Bot...");
     addCalculateTipBotCommands(prodBot);
     prodBot.launch();
   } else {
