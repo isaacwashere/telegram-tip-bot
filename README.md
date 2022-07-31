@@ -1,4 +1,4 @@
-# Telegram Bot
+# Telegram Tip Bot
 
 This is just supposed to be a fun little open source Telegram Bot to help calculate the tip for a user
 
