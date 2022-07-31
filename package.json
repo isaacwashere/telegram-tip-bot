@@ -1,8 +1,8 @@
 {
   "name": "telegram-tip-bot",
   "version": "1.0.0",
-  "main": "dist/src/app.js",
-  "types": "dist/src/app.d.ts",
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
   "scripts": {
     "start": "node dist/src/app.js",
     "build": "tsc",
